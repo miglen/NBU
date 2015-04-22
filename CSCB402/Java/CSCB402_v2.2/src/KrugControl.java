@@ -1,5 +1,10 @@
-
-
+/*
+ * CSCB402 - Visual Java
+ * Variant 2
+ * Student: Miglen Evlogiev
+ * Faculty number: F43454
+ * Protocol: 19063
+ */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.beans.PropertyVetoException;
