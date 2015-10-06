@@ -23,7 +23,8 @@ d. apply-templates
 <COVER href="wrox_logo.gif"/>
 </BOOK>
 ...........
-</books>```
+</books>
+```
 
 Опишете XPath пътя до елемента COVER, като започнете от виртуалния корен:
 `order[@COVER]`
