@@ -3,10 +3,13 @@
 
 ## За многократна обработка на един и същ XML код с XSLT се използват:
 
-**a. режими (mode)**
-b. приоритет (priority)
-c. cell-template
-d. apply-templates
+  __режими (mode)__
+  
+  приоритет (priority)
+  
+  cell-template
+  
+  apply-templates
 
 
 ## В XML документа:
