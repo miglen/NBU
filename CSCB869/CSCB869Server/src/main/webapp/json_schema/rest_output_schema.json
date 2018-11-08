@@ -1,0 +1,48 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$id": "/CSCB896/rest/post",
+  "type": "object",
+  "properties": {
+    "findSubstr": {
+      "$id": "/properties/findSubstr",
+      "type": "integer",
+      "title": "The Findsubstr Schema",
+      "description": "Output from the Findsubstr method using the text and the needle substring.",
+      "default": 0,
+      "examples": [
+        -1
+      ]
+    },
+    "getNumberOfSymbols": {
+      "$id": "/properties/getNumberOfSymbols",
+      "type": "integer",
+      "title": "The Getnumberofsymbols Schema",
+      "description": "Output from the Getnumberofsymbols method.",
+      "default": 0,
+      "examples": [
+        22
+      ]
+    },
+    "getNumberOfWords": {
+      "$id": "/properties/getNumberOfWords",
+      "type": "integer",
+      "title": "The Getnumberofwords Schema",
+      "description": "Output from the Getnumberofwords method.",
+      "default": 0,
+      "examples": [
+        5
+      ]
+    },
+    "invertString": {
+      "$id": "/properties/invertString",
+      "type": "string",
+      "title": "The Invertstring Schema",
+      "description": "Output from the Invertstring method.",
+      "default": "",
+      "examples": [
+        "!txet elpmas a si sihT"
+      ]
+    }
+  }
+}

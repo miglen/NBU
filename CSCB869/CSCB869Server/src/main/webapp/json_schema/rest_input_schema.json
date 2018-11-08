@@ -1,0 +1,28 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$id": "/CSCB896/rest/post",
+  "type": "object",
+  "properties": {
+    "text": {
+      "$id": "/properties/text",
+      "type": "string",
+      "title": "The Text Schema",
+      "description": "This is te text string to be provided and tested",
+      "default": "",
+      "examples": [
+        "This is a sample text! ...."
+      ]
+    },
+    "needle": {
+      "$id": "/properties/needle",
+      "type": "string",
+      "title": "The Needle Schema",
+      "description": "This is a substring from the text tha will be searched for",
+      "default": "",
+      "examples": [
+        "text"
+      ]
+    }
+  }
+}
