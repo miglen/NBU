@@ -1,5 +1,6 @@
 #!/bin/env python3
 # -*- coding: utf-8 -*-
+import json
 
 
 class Node():
@@ -326,6 +327,29 @@ class AVLTree():
                     print('\t' * level, '    \\')
                 self.node.left.display_tree(level + 1)
 
+    def to_dict(self):
+        '''
+        Функция за представяне на дървото в dict
+        '''
+        data = {}
+        if(self.node is not None):
+            data['key'] = self.node.key
+            data['height'] = self.height
+            data['balance'] = self.balance
+
+            if self.node.right is not None:
+                data['right'] = self.node.right.to_dict()
+
+            if self.node.left is not None:
+                data['left'] = self.node.left.to_dict()
+
+        return data
+
+    def to_json(self):
+        '''
+        Функция за представяне на дървото в JSON
+        '''
+        return json.dumps(self.to_dict())
 
 if __name__ == "__main__":
     '''
@@ -333,25 +357,29 @@ if __name__ == "__main__":
     класовете ще изпълним следния примерен код за да
     демонстрираме функционалността.
     '''
-    print ()
+    print()
     a = AVLTree()
-    print ("----- Вмъкване на елементи -------")
+    print("----- Вмъкване на елементи -------")
     elementi = [23, 15, 22, 1, 0, 14, 7, 15, 3]
     for i in elementi:
         a.insert(i)
-    print ("Входящи елементи: ", elementi)
+    print("Входящи елементи: ", elementi)
     a.display_tree()
     print()
+    print("JSON: ", a.to_json())
+    print()
 
-    print ("----- Изтриване на елементи -------")
-    print ("изтриване 15 ...       ", 15)
+    print("----- Изтриване на елементи -------")
+    print("изтриване 15 ...       ", 15)
     '''
     Тук ще се наложи цялостно ребалансиране на дървото.
     '''
     a.delete(15)
-    print ("изтриване 1 ...       ", 1)
+    print("изтриване 1 ...       ", 1)
     a.delete(1)
     a.display_tree()
-    print ()
-    print ("Траверсиране по ред:", a.traverse())
-    print ()
+    print()
+    print("JSON: ", a.to_json())
+    print()
+    print("Траверсиране по ред:", a.traverse())
+    print()
