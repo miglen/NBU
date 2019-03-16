@@ -360,7 +360,8 @@ if __name__ == "__main__":
     print()
     a = AVLTree()
     print("----- Вмъкване на елементи -------")
-    elementi = [23, 15, 22, 1, 0, 14, 7, 15, 3]
+    #elementi = [23, 15, 22, 1, 0, 14, 7, 15, 3]
+    elementi = [0,3,6,8,10,15,11,12,14,17]
     for i in elementi:
         a.insert(i)
     print("Входящи елементи: ", elementi)
@@ -370,13 +371,13 @@ if __name__ == "__main__":
     print()
 
     print("----- Изтриване на елементи -------")
-    print("изтриване 15 ...       ", 15)
+    #print("изтриване 15 ...       ", 15)
     '''
     Тук ще се наложи цялостно ребалансиране на дървото.
     '''
-    a.delete(15)
+    #a.delete(15)
     print("изтриване 1 ...       ", 1)
-    a.delete(1)
+    #a.delete(1)
     a.display_tree()
     print()
     print("JSON: ", a.to_json())
